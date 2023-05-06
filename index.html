@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>JS 9</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: calibri;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 96vh;
+            background-color: rgb(0, 0, 0);
+        }
+
+        .avtorizacia {
+            font-size: 27px;
+            text-align: center;
+            color: #ffb9f1;
+            text-shadow: 1.5px 1.5px 20px #e100f1;
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+
+        .inputi {
+            width: 300px;
+            height: 40px;
+            box-sizing: border-box;
+            outline: none;
+            margin: 10px;
+            display: block;
+            border: 1.5px solid #e100f1;
+            border-radius: 3px;
+            background-color: #1d001f;
+            box-shadow: 1px 0px 10px 1px #ffb9f1;
+            color: #ffb9f1;
+            text-shadow: 1px 1px 6px #e9a0ee;
+            font-weight: 500;
+            padding: 15px;
+            font-family: calibri;
+            font-size: 13.5px;
+        }
+
+        ::placeholder {
+            color: #ffb9f1;
+            text-shadow: 1px 1px 6px #e9a0ee;
+            font-weight: 500;
+            font-family: calibri;
+            font-size: 13.5px;
+        }
+
+        .shesvla {
+            width: 200px;
+            height: 40px;
+            box-sizing: border-box;
+            outline: none;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 1px 0px 10px 1px #ffb9f1;
+            border-radius: 3px;
+            border: 1.5px solid #e100f1;
+            background-color: #c500d3;
+            color: #ffcff9;
+            text-shadow: 1px 1px 7px #ffffff;
+            font-size: 15px;
+            font-family: ariel;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <form action="#">
+
+        <p class="avtorizacia">ავტორიზაცია</p>
+
+        <input class="inputi" type="email" placeholder="შეიყვანეთ თქვენი ელ-ფოსტა">
+
+        <input class="inputi" type="password" placeholder="შეიყვანეთ პაროლი">
+
+        <button class="shesvla" type="submit">შესვლა</button>
+
+
+    </form>
+
+    <script>
+
+        let gilaki = document.querySelector('button');
+        let veli = document.querySelectorAll('input');
+
+        gilaki?.addEventListener('click', () => {
+            veli.forEach(input => input.value = '');
+        });
+
+    </script>
+
+
+</body>
+
+</html>
